@@ -1,0 +1,363 @@
+
+*** Running vivado
+    with args -log filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source filter.tcl
+
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source filter.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/caccolillo/Downloads/test_filter_colin/vivado_tb/project_1/project_1.srcs/utils_1/imports/synth_1/filter.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/caccolillo/Downloads/test_filter_colin/vivado_tb/project_1/project_1.srcs/utils_1/imports/synth_1/filter.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top filter -part xc7z020clg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 145747
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/home/caccolillo/Xilinx_2022_2/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 2113.559 ; gain = 379.707 ; free physical = 326 ; free virtual = 35379
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1542.148; parent = 1334.387; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3090.324; parent = 2113.562; children = 976.762
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'filter' [/home/caccolillo/Downloads/test_filter_colin/hdlsrc/filter.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'filter' (0#1) [/home/caccolillo/Downloads/test_filter_colin/hdlsrc/filter.vhd:79]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2189.527 ; gain = 455.676 ; free physical = 442 ; free virtual = 35452
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1542.148; parent = 1334.387; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3166.293; parent = 2189.531; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2207.340 ; gain = 473.488 ; free physical = 433 ; free virtual = 35443
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1542.148; parent = 1334.387; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3184.105; parent = 2207.344; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2215.344 ; gain = 481.492 ; free physical = 434 ; free virtual = 35444
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1542.148; parent = 1334.387; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3192.109; parent = 2215.348; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2238.195 ; gain = 504.344 ; free physical = 338 ; free virtual = 35370
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1546.999; parent = 1339.341; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3214.961; parent = 2238.199; children = 976.762
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   41 Bit       Adders := 6     
+	   2 Input   26 Bit       Adders := 6     
+	   2 Input   24 Bit       Adders := 1     
+	   2 Input   22 Bit       Adders := 6     
+	   2 Input   13 Bit       Adders := 6     
++---Registers : 
+	               12 Bit    Registers := 19    
++---Muxes : 
+	   2 Input   40 Bit        Muxes := 36    
+	   2 Input   13 Bit        Muxes := 6     
+	   2 Input   12 Bit        Muxes := 36    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP mul_temp, operation Mode is: A*(B:0x716).
+DSP Report: operator mul_temp is absorbed into DSP mul_temp.
+DSP Report: Generating DSP sub_temp_1, operation Mode is: C-A*(B:0x343).
+DSP Report: operator sub_temp_1 is absorbed into DSP sub_temp_1.
+DSP Report: operator a3mul1 is absorbed into DSP sub_temp_1.
+DSP Report: Generating DSP sub_temp, operation Mode is: C-A*(B:0x6a1).
+DSP Report: operator sub_temp is absorbed into DSP sub_temp.
+DSP Report: operator a2mul1 is absorbed into DSP sub_temp.
+DSP Report: Generating DSP mul_temp_1, operation Mode is: A*(B:0x716).
+DSP Report: operator mul_temp_1 is absorbed into DSP mul_temp_1.
+DSP Report: Generating DSP ARG, operation Mode is: C+A*(B:0x716).
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator mul_temp_1 is absorbed into DSP ARG.
+DSP Report: Generating DSP sub_temp_3, operation Mode is: C-A*(B:0x39b).
+DSP Report: operator sub_temp_3 is absorbed into DSP sub_temp_3.
+DSP Report: operator a3mul2 is absorbed into DSP sub_temp_3.
+DSP Report: Generating DSP sub_temp_2, operation Mode is: C-A*(B:0x3f88f).
+DSP Report: operator sub_temp_2 is absorbed into DSP sub_temp_2.
+DSP Report: operator a2mul2 is absorbed into DSP sub_temp_2.
+DSP Report: Generating DSP mul_temp_2, operation Mode is: A*(B:0x665).
+DSP Report: operator mul_temp_2 is absorbed into DSP mul_temp_2.
+DSP Report: Generating DSP ARG, operation Mode is: C+A*(B:0x665).
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator mul_temp_2 is absorbed into DSP ARG.
+DSP Report: Generating DSP sub_temp_5, operation Mode is: C-A*(B:0x2fa).
+DSP Report: operator sub_temp_5 is absorbed into DSP sub_temp_5.
+DSP Report: operator a3mul3 is absorbed into DSP sub_temp_5.
+DSP Report: Generating DSP sub_temp_4, operation Mode is: C-A*(B:0x3f92e).
+DSP Report: operator sub_temp_4 is absorbed into DSP sub_temp_4.
+DSP Report: operator a2mul3 is absorbed into DSP sub_temp_4.
+DSP Report: Generating DSP mul_temp_3, operation Mode is: A*(B:0x665).
+DSP Report: operator mul_temp_3 is absorbed into DSP mul_temp_3.
+DSP Report: Generating DSP ARG, operation Mode is: C+A*(B:0x665).
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator mul_temp_3 is absorbed into DSP ARG.
+DSP Report: Generating DSP sub_temp_7, operation Mode is: C-A*(B:0x237).
+DSP Report: operator sub_temp_7 is absorbed into DSP sub_temp_7.
+DSP Report: operator a3mul4 is absorbed into DSP sub_temp_7.
+DSP Report: Generating DSP sub_temp_6, operation Mode is: C-A*(B:0x5a7).
+DSP Report: operator sub_temp_6 is absorbed into DSP sub_temp_6.
+DSP Report: operator a2mul4 is absorbed into DSP sub_temp_6.
+DSP Report: Generating DSP mul_temp_4, operation Mode is: A*(B:0x613).
+DSP Report: operator mul_temp_4 is absorbed into DSP mul_temp_4.
+DSP Report: Generating DSP ARG, operation Mode is: C+A*(B:0x613).
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator mul_temp_4 is absorbed into DSP ARG.
+DSP Report: Generating DSP sub_temp_9, operation Mode is: C-A*(B:0x29e).
+DSP Report: operator sub_temp_9 is absorbed into DSP sub_temp_9.
+DSP Report: operator a3mul5 is absorbed into DSP sub_temp_9.
+DSP Report: Generating DSP sub_temp_8, operation Mode is: C-A*(B:0x3f98a).
+DSP Report: operator sub_temp_8 is absorbed into DSP sub_temp_8.
+DSP Report: operator a2mul5 is absorbed into DSP sub_temp_8.
+DSP Report: Generating DSP mul_temp_5, operation Mode is: A*(B:0x613).
+DSP Report: operator mul_temp_5 is absorbed into DSP mul_temp_5.
+DSP Report: Generating DSP ARG, operation Mode is: C+A*(B:0x613).
+DSP Report: operator ARG is absorbed into DSP ARG.
+DSP Report: operator mul_temp_5 is absorbed into DSP ARG.
+DSP Report: Generating DSP sub_temp_11, operation Mode is: C-A*(B:0x1ae).
+DSP Report: operator sub_temp_11 is absorbed into DSP sub_temp_11.
+DSP Report: operator a3mul6 is absorbed into DSP sub_temp_11.
+DSP Report: Generating DSP sub_temp_10, operation Mode is: C-A*(B:0x525).
+DSP Report: operator sub_temp_10 is absorbed into DSP sub_temp_10.
+DSP Report: operator a2mul6 is absorbed into DSP sub_temp_10.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 260 ; free virtual = 35134
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1795.461; parent = 1587.920; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|filter      | A*(B:0x716)     | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x343)   | 12     | 11     | 40     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x6a1)   | 12     | 12     | 27     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*(B:0x716)     | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*(B:0x716)   | 12     | 12     | 13     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x39b)   | 12     | 11     | 40     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x3f88f) | 12     | 12     | 27     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*(B:0x665)     | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*(B:0x665)   | 12     | 12     | 13     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x2fa)   | 12     | 11     | 40     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x3f92e) | 12     | 12     | 27     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*(B:0x665)     | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*(B:0x665)   | 12     | 12     | 13     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x237)   | 12     | 11     | 40     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x5a7)   | 12     | 12     | 27     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*(B:0x613)     | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*(B:0x613)   | 12     | 12     | 13     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x29e)   | 12     | 11     | 40     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x3f98a) | 12     | 12     | 27     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*(B:0x613)     | 12     | 12     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*(B:0x613)   | 12     | 12     | 13     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x1ae)   | 12     | 10     | 40     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | C-A*(B:0x525)   | 12     | 12     | 27     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 258 ; free virtual = 35132
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1796.902; parent = 1589.362; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 258 ; free virtual = 35132
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1799.543; parent = 1592.003; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 249 ; free virtual = 35126
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1799.840; parent = 1592.300; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 249 ; free virtual = 35126
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1799.855; parent = 1592.315; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 249 ; free virtual = 35126
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1799.945; parent = 1592.405; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 249 ; free virtual = 35126
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1800.002; parent = 1592.462; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 249 ; free virtual = 35126
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1800.006; parent = 1592.466; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 249 ; free virtual = 35126
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1800.006; parent = 1592.466; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|filter      | A*B         | 30     | 11     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 10     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 11     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*B         | 30     | 11     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*B       | 30     | 11     | 12     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 10     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 18     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*B         | 30     | 11     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*B       | 30     | 11     | 12     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 10     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 18     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*B         | 30     | 11     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*B       | 30     | 11     | 12     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 10     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 11     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*B         | 30     | 11     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*B       | 30     | 11     | 12     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 10     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 18     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | A*B         | 30     | 11     | -      | -      | 24     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|filter      | C+A*B       | 30     | 11     | 12     | -      | 24     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 9      | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
+|filter      | not(C+A*B)  | 30     | 11     | 48     | -      | 41     | 0    | 0    | 0    | -    | -     | 0    | 0    | 
++------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |BUFG    |     1|
+|2     |CARRY4  |   107|
+|3     |DSP48E1 |    23|
+|4     |LUT1    |   106|
+|5     |LUT2    |   143|
+|6     |LUT3    |    72|
+|7     |LUT4    |   480|
+|8     |LUT5    |   121|
+|9     |LUT6    |   212|
+|10    |FDCE    |   222|
+|11    |IBUF    |    15|
+|12    |OBUF    |    12|
++------+--------+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |  1514|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 249 ; free virtual = 35126
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1800.125; parent = 1592.587; children = 207.762
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3355.289; parent = 2378.527; children = 976.762
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.523 ; gain = 644.672 ; free physical = 256 ; free virtual = 35134
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 2378.531 ; gain = 644.672 ; free physical = 256 ; free virtual = 35134
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2388.430 ; gain = 0.000 ; free physical = 345 ; free virtual = 35223
+INFO: [Netlist 29-17] Analyzing 130 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'filter' is not ideal for floorplanning, since the cellview 'filter' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2515.109 ; gain = 0.000 ; free physical = 255 ; free virtual = 35144
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 79568e0a
+INFO: [Common 17-83] Releasing license: Synthesis
+19 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2515.109 ; gain = 788.195 ; free physical = 462 ; free virtual = 35351
+INFO: [Common 17-1381] The checkpoint '/home/caccolillo/Downloads/test_filter_colin/vivado_tb/project_1/project_1.runs/synth_1/filter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file filter_utilization_synth.rpt -pb filter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri May  9 18:15:16 2025...

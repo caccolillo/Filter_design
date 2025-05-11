@@ -1,0 +1,3 @@
+Time resolution is 1 ps
+Note: **************TEST COMPLETED (PASSED)**************
+Time: 28190 ns  Iteration: 1  Process: /filter_tb/completed_msg  File: /home/caccolillo/Downloads/test_filter_colin/hdlsrc/filter_tb.vhd

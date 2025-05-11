@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/caccolillo/Downloads/test_filter_colin/hdlsrc/filter.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'filter'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/caccolillo/Downloads/test_filter_colin/hdlsrc/filter_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'filter_tb'
